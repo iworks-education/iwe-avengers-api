@@ -1,0 +1,73 @@
+subprojects {
+    version = '1.0'
+    
+    apply plugin : 'java'
+    
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = "UTF-8"
+    
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+    	compile group: 'com.amazonaws', name: 'aws-lambda-java-core', version: '1.2.0'
+    	compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.367'
+	}
+	
+	jar {
+ 		destinationDir = file("$rootDir/build")
+	    from {
+	        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	    }
+	    jar
+	}
+}
+
+project(':iwe-avengers-create') {
+	dependencies {
+    	compile project(':iwe-avengers-service') 
+	}	
+}
+
+project(':iwe-avengers-update') {
+	dependencies {
+    	compile project(':iwe-avengers-service') 
+	}
+}
+
+project(':iwe-avengers-search') {
+	dependencies {
+    	compile project(':iwe-avengers-service') 
+	}	
+}
+
+project(':iwe-avengers-remove') {
+	dependencies {
+    	compile project(':iwe-avengers-service') 
+	}
+}
+
+project(':iwe-avengers-service') {
+   jar {
+	   from('src/main/java') {
+	      include 'com/iworks/justiceleague/repository/*.properties'
+	   }
+   }
+}
+
+project(':iwe-avengers-integration-tests') {
+	dependencies {
+		testCompile 'com.intuit.karate:karate-junit4:0.8.0'
+    	testCompile 'com.intuit.karate:karate-apache:0.8.0'
+	}
+	
+	sourceSets {
+	    test {
+	        resources {
+	            srcDir file('src/test/java')
+	            exclude '**/*.java'
+	        }
+    }
+}
+}
