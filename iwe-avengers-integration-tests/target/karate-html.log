@@ -1,0 +1,129 @@
+12:55:18.414 karate.env system property was: null 
+12:55:19.049 request:
+1 > GET https://www.marvel.com/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: www.marvel.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+12:55:19.985 response time in milliseconds: 932
+1 < 200
+1 < Age: 3669
+1 < Connection: keep-alive
+1 < Content-Length: 13750
+1 < Content-Type: text/html; charset=UTF-8
+1 < Date: Sun, 05 Aug 2018 15:55:24 GMT
+1 < Expires: Sun, 05 Aug 2018 16:54:15 GMT
+1 < P3P: CP="ALL DSP COR NID CURa TAIa OTPi OUR BUS UNI INT PRE"
+1 < Server: Apache
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 < X-ServerNickName: terrigen-jewel-prod02
+1 < X-UA-Compatible: IE=Edge
+                            <!DOCTYPE html>
+                            <html>
+                              <head>
+                            
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+                                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+                            
+                                <title>Avengers: Infinity War | Trailer & Official Movie Site | Now Playing</title>
+                                <meta name="title" content="Avengers: Infinity War | Trailer & Official Movie Site">
+                                <meta name="description" content="Avengers: Infinity War | Trailer & Official Movie Site">
+                                
+                                <meta name="og:title" content="Avengers: Infinity War | Trailer & Official Movie Site">
+                                <meta property="og:type" content="video.movie">
+                                <meta property="og:url" content="http://www.marvel.com/avengers">
+                                <meta property="og:title" content="Avengers: Infinity War">
+                                <meta property="og:description" content="As Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity ...">
+                                <meta property="og:site_name" content="Avengers: Infinity War">
+                            
+                                <meta name="twitter:card" content="summary_large_image">
+                                <meta name="twitter:site" content="@Marvel">
+                                <meta name="twitter:title" content="Avengers: Infinity War">
+                                <meta name="twitter:description" content="As Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity ...">
+                                <meta name="twitter:url" content="http://www.marvel.com/avengers">
+                                <meta name="twitter:domain" content="http://www.marvel.com">
+                                
+                                <base href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/">
+                            
+                            <meta property="og:image" content="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
+                            <meta name="twitter:image" content="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
+                            <link rel="canonical" href="http://www.marvel.com/avengers">
+                            <link rel="image_src" type="image/jpeg" href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
+                            <link rel="shortcut icon" href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/favicon.png">
+                                <link href="https://i.annihil.us/u/prod/marvel/s/css/30bd8023a0bd2ea1d18368e8e4dde32a.css" rel="stylesheet">
+                                <link href="https://i.annihil.us/u/prod/marvel/s/css/7e78dc308009667c6467c52cd317b7ce.css" rel="stylesheet">
+                                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900i" rel="stylesheet">
+                                <script type="text/javascript">
+                                  var SITE = SITE || {};
+                                  SITE.dom = '';
+                                </script>
+                                <script type="text/javascript" src="//marvel.com/i/js/marvel-widgets.js"></script>
+                                <script type="text/javascript">
+                                  var URLs = {
+                                  	'login': 'https://secure.marvel.com/user/login?referer=http%3A%2F%2Fmarvel.com%2Favengers',
+                                  	'signup': 'https://secure.marvel.com/user/register?referer=http%3A%2F%2Fmarvel.com%2Favengers',
+                                  	'comicReader': 'https://reader.marvel.com/#/issue/',
+                                  	'rpxWidgetUrl': 'https://widget-cdn.rpxnow.com/js/lib/forge.marvel.com/widget.js',
+                                  	'rpxWidgetUrlSecure': 'https://rpxnow.com/js/lib/forge.marvel.com/widget.js'
+                                  };
+                                  MarvelWidgets.init({
+                                  	home_url: "https://www.marvel.com/avengers",
+                                  	current_section: "movies",
+                                  	staging: "https://marvel.com",
+                                  	targets: {
+                                  		topnav: "marvelMenu"
+                                  	},
+                                  	settings: {
+                                  		exclude_search: true,
+                                  		exclude_login: true,
+                                  		small_nav: true,
+                                  		responsive: true,
+                                  		version: 2
+                                  	}
+                                  });
+                                </script>
+                                <link rel="stylesheet" type="text/css" href="css/main.css">
+                              </head>
+                              <body>
+                                <div id="marvelMenu"></div>
+                                <div id="preloader" class="TL">
+                                    <div id="preloadBarBlock" class="C">
+                                      <svg height="70" width="70" class="TL" viewport="0 0 70 70" id="preloadCircle">
+                                        <circle cx="35" cy="35" r="33" id="preloadCircleInner"/>
+                                      </svg>
+                                      <img src="./images/aBadge.png" alt="Avengers: Infinity War" id="preloadLogo" class="C">
+                                  </div>
+                                </div>
+                                <div id="content">
+                                  <div id="shell"></div>
+                                  <div id="foot">
+                                    <a target="_blank" href="http://disneytermsofuse.com/" class="exit">Terms of Use</a>
+                                    <a target="_blank" href="https://disneyprivacycenter.com/" class="exit">Privacy Policy</a>
+                                    <a target="_blank" href="https://disneyprivacycenter.com/notice-to-california-residents/" class="exit">Your California Privacy Rights</a>
+                                    <a target="_blank" href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/" class="exit">Children's Privacy Policy</a>
+                                    <a target="_blank" href="http://marvel.com/corporate/license_tou/" class="exit">License Agreement</a>
+                                    <a target="_blank" href="http://preferences-mgr.truste.com/?type=marvel&affiliateId=115" class="exit">Interest-Based Ads</a>
+                                    <div class="copyright">© 2018 MARVEL</div>
+                                  </div>
+                                </div>
+                                <script type="text/javascript" src="js/settings.js"></script>
+                                <script src="js/main.js"></script>
+                                <script type="text/javascript">
+                                  var utag_data = {
+                                      page_name: "movies | microsite | Avengers: Infinity War Movie Trailer, Release",
+                                      site_section: "movies",
+                                      tag_type: "view",
+                                      rsid: "marveldotcomv3"
+                                  }
+                              </script>
+                              <script type="text/javascript">
+                                  ! function(e, t, a, n) {
+                                      e = "//tags.tiqcdn.com/utag/disney/marvel/prod/utag.js", a = "script", (n = (t = document).createElement(a)).src = e, n.type = "text/java" + a, n.async = !0, (e = t.getElementsByTagName(a)[0]).parentNode.insertBefore(n, e)
+                                  }()
+                              </script>
+                              <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"77ea7d863b","applicationID":"84712622","transactionName":"b1FXYkYFWUcEBUNaClYbdFVADVhaSgJSVQRNWEEZXBBaWEgWVlQAF11bUlEc","queueTime":0,"applicationTime":236,"atts":"QxZUFA4fSkk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+                            </html>
+
+
+12:55:20.011 xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 411; O tipo de elemento "n.length" deve ser seguido pelas especificações do atributo, ">" ou "/>".
