@@ -1,2 +1,2 @@
 # Avengers API
-Api utilizada pela Shield para gerenciar o cadastro dos vingadores
+API responsible for maintaining Avengers registration in Shield
